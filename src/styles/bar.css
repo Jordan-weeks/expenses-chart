@@ -1,0 +1,45 @@
+
+.day-container{
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.bar-display{
+    background-color:  var(--soft-red);
+    border-radius: 5px;
+    /* transition: ease-in; */
+    transition-duration: .5s ;
+    cursor: pointer;
+    width: 75%;
+    place-self: center;
+    
+}
+.bar-display:hover{
+    opacity: .6;
+}
+.day-spent{
+    opacity: 0;
+    background-color: var(--dark-brown);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 3vw;
+    /* font-size: 50%; */
+    color: var(--very-pale-orange);
+}
+
+@media screen and (min-width:1000px) {
+    .day-spent{
+        opacity: 0;
+        background-color: var(--dark-brown);
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 18px;
+        color: var(--very-pale-orange);
+    }
+}
+.day-container:hover > .day-spent{
+    opacity: 1;
+
+}
